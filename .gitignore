@@ -1,0 +1,15 @@
+.idea
+.eslintcache
+node_modules
+package-lock.json
+coverage
+#cachedApiCalls
+
+Data-Deduplication.zip
+datim-dedupe.zip
+build/
+
+
+**/__pycache__
+**/__snapshots__
+

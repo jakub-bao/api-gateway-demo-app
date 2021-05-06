@@ -1,0 +1,9 @@
+{
+  "baseUrl": "../../../",
+  "apiVersion": "33",
+  "apiRefreshRate": 2000,
+  "apiOperationWait": 8000,
+  "enableSubrecipients": false,
+  "networkCheckInterval": 5000,
+  "networkCheckTimeoutS": 300
+}

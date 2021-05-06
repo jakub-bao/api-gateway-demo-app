@@ -1,0 +1,74 @@
+{
+  "name": "api-gateway-demo-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@dhis2-app/api": "^0.1.2",
+    "@dhis2-app/dev-tools": "^0.1.4",
+    "@dhis2-app/test-tools": "0.1.9",
+    "@dhis2/app-runtime": "^2.7.0",
+    "@dhis2/d2-i18n": "^1.0.6",
+    "@dhis2/ui": "6.1.7",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@types/node": "^14.14.22",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.0",
+    "clsx": "^1.1.1",
+    "notistack": "^1.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "styled-jsx": "^3.4.1",
+    "typescript": "4.1.3"
+  },
+  "scripts": {
+    "start:only": "react-scripts start",
+    "start": "react-scripts start",
+    "dep:watch": "localDep/watch.sh",
+    "dep:build": "localDep/build.sh",
+    "dep:install": "localDep/install.sh",
+    "build": "react-scripts build && npm run build:zip",
+    "build:zip": "(rm -f datim-dedupe.zip && cd build && zip ../datim-dedupe.zip -r .)",
+    "build:local-deps": "./localDep/install.sh test-tools && ./localDep/install.sh network-check && ./localDep/install.sh api && ./localDep/install.sh test-data",
+    "test": "react-scripts test --env=jest-environment-jsdom-sixteen --maxWorkers=4",
+    "test:ci": "react-scripts test --env=jest-environment-jsdom-sixteen --maxWorkers=20",
+    "test:coverage": "react-scripts test --env=jest-environment-jsdom-sixteen --coverage --watchAll",
+    "test:cache": "rm cachedApiCalls/*",
+    "data:dedupes": "ts-node --skip-project testData/dataValues/loadDataValues.ts",
+    "data:users": "ts-node --skip-project testData/users/loadUsers.ts",
+    "data:approvals": "ts-node --skip-project testData/approvals/unapprove.ts",
+    "data:cors": "(cd testData/cors && python3 cors.py)",
+    "data:datasets": "(cd testData/dataSets && python3 dataSets.py)",
+    "data:datastore": "(cd testData/dataStore && python3 dataStore.py)",
+    "data": "npm run data:users && npm run data:approvals && npm run data:dedupes && npm run data:datasets && npm run data:datastore && npm run data:cors"
+  },
+  "homepage": ".",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.20",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "jest-expect-message": "^1.0.2",
+    "node-fetch": "^2.6.1",
+    "ts-node": "^9.1.1"
+  },
+  "jest": {}
+}

@@ -1,9 +1,7 @@
 import React, {CSSProperties} from "react";
-import Loading from "../../../sharedModules/shared/components/loading.component";
-import NetworkError from "../../../sharedModules/boot/components/networkError.component";
 import {baseUrl} from "../../../sharedModules/shared/services/config.service";
 import {apiInit} from "@dhis2-app/api";
-import {registerDevMethod, DevTools} from "@dhis2-app/dev-tools";
+import {DevTools} from "@dhis2-app/dev-tools";
 import {Grid, Typography} from "@material-ui/core";
 import PageLink from "./pageLink.component";
 
@@ -12,7 +10,7 @@ apiInit(baseUrl,process.env.NODE_ENV);
 const styles = {
     root:{
         margin: '20px auto',
-        width:1024
+        width:1200
     } as CSSProperties,
     title: {
         fontWeight: 300,

@@ -1,11 +1,12 @@
 import React from "react";
 import {render} from "react-dom";
-import {baseUrl, networkCheckInterval, networkCheckTimeoutS} from "./sharedModules/shared/services/config.service";
+import {baseUrl} from "./sharedModules/shared/services/config.service";
 import ThemeWrapper from "./sharedModules/boot/components/themeWrapper.component";
 import "./index.css";
 import {Provider} from "@dhis2/app-runtime";
 import {HeaderBar} from '@dhis2/ui'
-import {Main} from "./modules/main/components/main.component";
+import Router from "./modules/main/components/router.component";
+
 
 export function Index(){
     return <Provider config={{baseUrl: baseUrl, apiVersion: 33}}>
@@ -13,7 +14,7 @@ export function Index(){
             <HeaderBar/>
         </div>
         <ThemeWrapper>
-            <Main/>
+            <Router/>
         </ThemeWrapper>
         <br/>
     </Provider>;

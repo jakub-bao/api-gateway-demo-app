@@ -1,7 +1,11 @@
 import React, {CSSProperties} from "react";
 import {Divider, Grid, Paper, Typography} from "@material-ui/core";
+import {Link} from "react-router-dom";
 
 const styles = {
+    root: {
+        margin: '0px 80px'
+    },
     paper: {
         width: 200,
         height: 300,
@@ -32,12 +36,14 @@ export default function PageLink({title, subtitle, backgroundColor, keyword}:{
     backgroundColor:string,
     keyword: string
 }) {
-    return <Grid item>
-        <Paper style={Object.assign({},styles.paper, {backgroundColor})}>
-            <Typography style={styles.title}>{title}</Typography>
-            <Divider/>
-            <Typography style={styles.keyword}>{keyword}</Typography>
-            <Typography style={styles.subtitle}>{subtitle}</Typography>
-        </Paper>
+    return <Grid item style={styles.root}>
+        <Link to={`/${keyword.toLowerCase()}`}>
+            <Paper style={Object.assign({},styles.paper, {backgroundColor})}>
+                <Typography style={styles.title}>{title}</Typography>
+                <Divider/>
+                <Typography style={styles.keyword}>{keyword}</Typography>
+                <Typography style={styles.subtitle}>{subtitle}</Typography>
+            </Paper>
+        </Link>
     </Grid>;
 }

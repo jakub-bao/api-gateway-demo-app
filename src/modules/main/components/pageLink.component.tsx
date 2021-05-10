@@ -30,14 +30,14 @@ const styles = {
     } as CSSProperties
 }
 
-export default function PageLink({title, subtitle, backgroundColor, keyword}:{
+export default function PageLink({title, subtitle, backgroundColor, keyword, ...props}:{
     title:string,
     subtitle:string,
     backgroundColor:string,
-    keyword: string
+    keyword: string,
+    style:any
 }) {
-    return <Grid item style={styles.root}>
-        <Link to={`/${keyword.toLowerCase()}`}>
+        return <Link to={`/${keyword.toLowerCase()}`} {...props}>
             <Paper style={Object.assign({},styles.paper, {backgroundColor})}>
                 <Typography style={styles.title}>{title}</Typography>
                 <Divider/>
@@ -45,5 +45,4 @@ export default function PageLink({title, subtitle, backgroundColor, keyword}:{
                 <Typography style={styles.subtitle}>{subtitle}</Typography>
             </Paper>
         </Link>
-    </Grid>;
 }

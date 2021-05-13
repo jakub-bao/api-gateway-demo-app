@@ -1,5 +1,5 @@
 import React, {CSSProperties} from "react";
-import {Divider, Grid, Paper, Typography} from "@material-ui/core";
+import {Divider, Paper, Typography} from "@material-ui/core";
 import {Link} from "react-router-dom";
 
 const styles = {

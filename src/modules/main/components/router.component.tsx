@@ -3,6 +3,7 @@ import {HashRouter as ReactRouter, Route, Switch} from "react-router-dom";
 import {Main} from "./main.component";
 import CrossOriginRequest from "../../crossOriginRequest/crossOriginRequestPage.component";
 import Heading from "./heading.component";
+import NgingxRedirectPage from "../../nginxRedirect/ngingxRedirectPage.component";
 
 const styles = {
     root:{
@@ -21,7 +22,7 @@ export default function Router() {
                     <CrossOriginRequest/>
                 </Route>
                 <Route path="/nginxRedirect">
-                    redirect
+                    <NgingxRedirectPage/>
                 </Route>
                 <Route path="/">
                     <Main/>

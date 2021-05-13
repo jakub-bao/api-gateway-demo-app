@@ -2,10 +2,8 @@ import React from "react";
 import SolutionTemplate from "../solutionPage/components/solutionTemplate.component";
 import InfoSection from "../solutionPage/components/infoSection.component";
 import {Typography} from "@material-ui/core";
-import {Info} from "@material-ui/icons";
 
-export default class CrossOriginRequest extends React.Component<{},{}> {
-  render() {
+export default function CrossOriginRequest(){
     return <SolutionTemplate>
         <InfoSection>
             <Typography variant='h5'>Outcome</Typography>
@@ -29,4 +27,3 @@ export default class CrossOriginRequest extends React.Component<{},{}> {
         </InfoSection>
     </SolutionTemplate>;
   }
-}

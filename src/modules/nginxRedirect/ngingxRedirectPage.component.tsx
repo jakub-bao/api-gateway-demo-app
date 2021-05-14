@@ -5,13 +5,12 @@ import {Button, Typography} from "@material-ui/core";
 
 const styles = {
     report: {
-        display: 'inline-block'
     } as CSSProperties
 }
 
 async function connect(setCookie:(cookie:string)=>void):Promise<void>{
     let response = await fetch('/apiGateway').then(r=>r.json());
-    setCookie(response.cookies);
+    setCookie(response.receivedCookie);
 }
 
 export default function NgingxRedirectPage(){
@@ -33,7 +32,10 @@ export default function NgingxRedirectPage(){
             <Button variant="contained" color="secondary" size='small' onClick={()=>connect(setCookie)}>
                 Reach API Gateway
             </Button>
-            {cookie&&<Typography style={styles.report}>API Gateway received the following cookies</Typography>}
+            {cookie&&<React.Fragment>
+                <Typography style={styles.report}>API Gateway received the following cookies:</Typography>
+                <Typography>{cookie}</Typography>
+            </React.Fragment>}
         </InfoSection>
     </SolutionTemplate>;
 }

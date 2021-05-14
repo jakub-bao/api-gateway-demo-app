@@ -30,7 +30,7 @@
     "dep:build": "localDep/build.sh",
     "dep:install": "localDep/install.sh",
     "build": "react-scripts build && npm run build:zip",
-    "build:zip": "(rm -f datim-dedupe.zip && cd build && zip ../datim-dedupe.zip -r .)",
+    "build:zip": "(rm -f api-gateway.zip && cd build && zip ../api-gateway.zip -r .)",
     "build:local-deps": "./localDep/install.sh test-tools && ./localDep/install.sh network-check && ./localDep/install.sh api && ./localDep/install.sh test-data",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen --maxWorkers=4",
     "test:ci": "react-scripts test --env=jest-environment-jsdom-sixteen --maxWorkers=20",

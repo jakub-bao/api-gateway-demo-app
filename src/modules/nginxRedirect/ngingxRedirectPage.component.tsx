@@ -20,7 +20,7 @@ export default function NgingxRedirectPage(){
             <Typography variant='h5'>Process</Typography>
             <Typography>
                 <ol>
-                    <li>The app sends an HTTP GET request to https://jakub.datim.org/apiGateway</li>
+                    <li>The app sends an HTTP GET request to /apiGateway</li>
                     <li>The server should be able to extract JSESSIONID cookie from the request headers and send it back</li>
                 </ol>
             </Typography>

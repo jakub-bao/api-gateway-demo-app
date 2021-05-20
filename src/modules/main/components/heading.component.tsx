@@ -46,7 +46,7 @@ export default function Heading({}:{}) {
                     Cross-Origin Request
                 </Route>
                 <Route path="/nginxredirect">
-                    Ngingx Redirect
+                    Nginx Redirect
                 </Route>
                 <Route path="/">
                     Main Menu

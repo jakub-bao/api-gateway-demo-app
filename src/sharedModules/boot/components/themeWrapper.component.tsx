@@ -1,9 +1,8 @@
-import React from "react";
+import React, {CSSProperties} from "react";
 import {ThemeProvider} from "@material-ui/styles";
 import {createGenerateClassName, createMuiTheme, StylesProvider} from "@material-ui/core/styles";
 
 import "../css/themeWrapper.component.css";
-import {PositionProperty} from "csstype";
 import {colors} from "../../../values/color.values";
 
 const theme = createMuiTheme({
@@ -23,9 +22,9 @@ const theme = createMuiTheme({
 const styles = {
     wrapper: {
         margin: 0,
-        position: 'relative' as PositionProperty,
+        position: 'relative',
         top: 48
-    }
+    } as CSSProperties
 };
 
 const generateClassName = createGenerateClassName({

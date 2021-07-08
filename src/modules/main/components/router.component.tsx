@@ -4,6 +4,7 @@ import {Main} from "./main.component";
 import CrossOriginRequest from "../../crossOriginRequest/crossOriginRequestPage.component";
 import Heading from "./heading.component";
 import NgingxRedirectPage from "../../nginxRedirect/ngingxRedirectPage.component";
+import HRHPage from "../../hrh/hrhPage.component";
 
 const styles = {
     root:{
@@ -23,6 +24,9 @@ export default function Router() {
                 </Route>
                 <Route path="/nginxRedirect">
                     <NgingxRedirectPage/>
+                </Route>
+                <Route path="/hrh">
+                    <HRHPage/>
                 </Route>
                 <Route path="/">
                     <Main/>

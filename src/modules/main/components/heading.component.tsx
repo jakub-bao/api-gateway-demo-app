@@ -26,7 +26,7 @@ const styles = {
 export default function Heading({}:{}) {
     return <React.Fragment>
         <Switch>
-            <Route path={["/cors",'/nginxredirect']}>
+            <Route path={["/cors",'/nginxredirect','/hrh']}>
                 <Link to='/'>
                     <Button
                         size="large"
@@ -47,6 +47,9 @@ export default function Heading({}:{}) {
                 </Route>
                 <Route path="/nginxredirect">
                     Nginx Redirect
+                </Route>
+                <Route path="/hrh">
+                    HRH
                 </Route>
                 <Route path="/">
                     Main Menu

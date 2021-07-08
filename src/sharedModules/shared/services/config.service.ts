@@ -14,6 +14,7 @@ switch (process.env.NODE_ENV){
 if (!config) config = require("../../../config/serverConfig.dev.json");
 
 export const baseUrl = config.baseUrl;
+export const pdapUrl = config.pdapUrl;
 export const apiRefreshRate = config.apiRefreshRate;
 export const apiOperationWait = config.apiOperationWait;
 export const enableSubrecipients = config.enableSubrecipients;

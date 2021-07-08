@@ -1,5 +1,7 @@
 {
-  "baseUrl": "https://jakub.datim.org/",
+  "baseUrl": "https://sandbox.er.datim.org/",
+  "pdapUrl": "https://api.sbx.pdap.pepfar.net/",
+  "pdapUrlTRYING": "http://localhost:8080/",
   "apiVersion": "33",
   "apiRefreshRate": 500,
   "apiOperationWait": 1000

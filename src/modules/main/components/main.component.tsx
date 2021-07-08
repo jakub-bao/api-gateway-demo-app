@@ -24,7 +24,14 @@ export class Main extends React.Component<{},{}> {
                     keyword='NginxRedirect'
                     subtitle="Server-side redirect through nginx"
                     backgroundColor='#379634'
-                    style={{display: 'inline-block', marginLeft: '350px'} as CSSProperties}
+                    style={{display: 'inline-block', marginLeft: '100px'} as CSSProperties}
+                />
+                <PageLink
+                    title="Prototype #3"
+                    keyword='HRH'
+                    subtitle="Example of HRH api functionality"
+                    backgroundColor='#379634'
+                    style={{display: 'inline-block', marginLeft: '100px'} as CSSProperties}
                 />
             <DevTools buildName='First version 0.0.1' buildDate={new Date()}/>
         </React.Fragment>;
